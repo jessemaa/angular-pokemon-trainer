@@ -4,11 +4,13 @@ import { LoginPageComponent } from 'src/components/login-page/login.page.compone
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppHeaderComponent } from './app-header/app-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,
