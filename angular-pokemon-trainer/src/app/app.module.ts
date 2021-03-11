@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppHeaderComponent } from './app-header/app-header.component';
+import { AppHeaderComponent } from '../components/app-header/app-header.component';
 import { PokemonCatalogueComponent } from '../components/pokemon-catalogue/pokemon-catalogue.component';
 
 @NgModule({
