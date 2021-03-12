@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { LoginPageComponent } from 'src/components/login-page/login.page.component';
+import { LoginPageComponent } from 'src/components/login-page/login-page.component';
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
