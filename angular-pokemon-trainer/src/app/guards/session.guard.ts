@@ -9,9 +9,11 @@ import { SessionService } from '../services/session.service';
 })
 export class SessionGuard implements CanActivate {
 
-  constructor(private readonly router: Router, private readonly sessionService: SessionService) {
-
+  constructor(
+    private readonly router: Router,
+    private readonly sessionService: SessionService) {
   }
+  
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {

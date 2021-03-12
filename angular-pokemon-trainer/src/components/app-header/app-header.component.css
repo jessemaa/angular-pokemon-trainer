@@ -1,11 +1,11 @@
-header {
-    padding: 20px 0;
-    text-align: center;
+img {
+    max-width: 150px;
+}
+
+.custom-app-header {
     background-color: seagreen;
 }
 
-header h1 {
-    text-transform: uppercase;
+.custom-app-header .nav-link {
     color: white;
-    letter-spacing: 3px;
 }

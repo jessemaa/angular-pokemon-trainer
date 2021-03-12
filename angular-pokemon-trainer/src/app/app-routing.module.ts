@@ -21,11 +21,13 @@ const routes: Routes = [
   },
 /*   {
     path: 'pokemon/:name',
-    component: PokemonDetailComponent
+    component: PokemonDetailComponent,
+    canActivate: [ SessionGuard ]
   },
   {
     path: 'trainer',
-    component: TrainerPageComponent
+    component: TrainerPageComponent,
+    canActivate: [ SessionGuard ]
   },
   {
     path: '**',
