@@ -11,21 +11,15 @@ import { Pokemon } from 'src/models/Pokemon'
 export class PokemonCatalogueComponent implements OnInit {
 
   constructor (
-    private readonly dataService: DataService
+    private readonly dataService: DataService,
   ) { }
 
-  public pokemons: Pokemon[] = [];
+  get pokemon(): Pokemon[] {
+    return this.dataService.pokemon;
+  }
 
   ngOnInit(): void {
-    for (let i: number = 1; i < 152; i++) {
-      this.dataService.fetchPokemons(i)
-        .then((data) => {
-        data.image = data.sprites.other.dream_world.front_default;
-        data.typesLen = data.types;
-        this.pokemons.push(data);
-        this.pokemons.sort((a, b) => a.id - b.id);
-      });
-    }
+    this.dataService.fetchPokemon()
   }
 
 }
