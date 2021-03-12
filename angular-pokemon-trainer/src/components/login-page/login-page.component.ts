@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
+import { Router } from '@angular/router'
+import { AppRoutes } from 'src/app/enums/app-routes.enum'
 
 @Component({
   selector: 'login-page',
@@ -9,7 +11,7 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 })
 export class LoginPageComponent {
 
-  constructor(private localStorageService: LocalStorageService) {}
+  constructor(private localStorageService: LocalStorageService, private readonly router: Router) {}
 
   loginForm: FormGroup = new FormGroup({
     trainerName: new FormControl('', [
@@ -21,9 +23,11 @@ export class LoginPageComponent {
 
   setTrainerName() {
     let trainerName = this.loginForm.value
-    console.log('this is going in',this.loginForm.value)
     this.localStorageService.set('trainerName', trainerName);
-    console.log('this is in localstorage', this.localStorageService.get('trainerName'))
+  };
+
+  handleLoginSuccess() {
+    this.router.navigateByUrl( AppRoutes.POKEMON )
   }
 
 /*   getTrainerName() {
