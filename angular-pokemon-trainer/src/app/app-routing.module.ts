@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginPageComponent } from 'src/components/login-page/login-page.component';
 import { PokemonCatalogueComponent } from 'src/components/pokemon-catalogue/pokemon-catalogue.component';
+import { SessionGuard } from './guards/session.guard';
 
 const routes: Routes = [
   {
@@ -15,7 +16,8 @@ const routes: Routes = [
   },
   {
     path: 'pokemon',
-    component: PokemonCatalogueComponent
+    component: PokemonCatalogueComponent,
+    canActivate: [ SessionGuard ]
   },
 /*   {
     path: 'pokemon/:name',
