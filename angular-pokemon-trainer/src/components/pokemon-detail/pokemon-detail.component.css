@@ -1,0 +1,19 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.flex-child {
+    width: 48vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img {
+    padding: 10px;
+}
+
+.img-container {
+    height: 500px;
+}
