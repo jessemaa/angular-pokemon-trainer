@@ -6,11 +6,11 @@ This application is a Pokemon catalogue web app and was generated with [Angular 
 
 There are multiple views: 
 
-Login (landing page): User can enter their trainer name and it will be saved to local storage.
-Pokemon Catalogue: Displays a grid of original 151 pokemons with clickable cards.
-Pokemon Details: Displays detailed information on selected pokemon such as image, stats, moves and abilities. Also has a button to collect the pokemon. The trainer can collect multiple pokemons (even the same kind).
-Trainer: Displays collected pokemons in a card style grid. Each card is clickable and goes to details page.
-Error: Unmapped URL paths redirect here.
+* Login (landing page): User can enter their trainer name and it will be saved to local storage.
+* Pokemon Catalogue: Displays a grid of original 151 pokemons with clickable cards.
+* Pokemon Details: Displays detailed information on selected pokemon such as image, stats, moves and abilities. Also has a button to collect the pokemon. The trainer can collect multiple pokemons (even the same kind).
+* Trainer: Displays collected pokemons in a card style grid. Each card is clickable and goes to details page.
+* Error: Unmapped URL paths redirect here.
 
 ## Development server
 
