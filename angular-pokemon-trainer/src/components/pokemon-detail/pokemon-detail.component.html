@@ -27,7 +27,7 @@
                     <option *ngFor="let move of pokemon.moves">{{move.move.name}}</option>
                 </select>
             </div>
-                <button class="btn btn-success">Collect</button>
+                <button class="btn btn-success" (click)="collectPokemon()">Collect</button>
         </div>
         </div>
 </div>

@@ -29,8 +29,4 @@ export class LoginPageComponent {
   handleLoginSuccess() {
     this.router.navigateByUrl( AppRoutes.POKEMON )
   }
-
-/*   getTrainerName() {
-    console.log(this.localStorageService.get('trainerName'))
-  } */
 }

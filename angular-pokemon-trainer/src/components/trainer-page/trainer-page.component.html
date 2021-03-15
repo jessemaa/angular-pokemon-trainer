@@ -1,1 +1,20 @@
-<h1>Trainer</h1>
+
+
+<div class="center">
+<h1>Hello, Trainer {{ trainerName }}</h1>
+
+    <div class="poke-container">
+        <div *ngFor="let pokemon of collectedPokemons" class="pokemon" [routerLink]="pokemon.name">
+          <div class="img-container">
+            <img [src]="pokemon.sprites.other.dream_world.front_default" [alt]="pokemon.name">
+        </div>
+          <div class="info">
+            <h3 class="name">{{ pokemon.name }}</h3>
+          </div>
+        </div>
+        </div>
+
+        <button class="btn btn-success" (click)="clearStorageAndLogout()">Log out and clear storage</button>
+
+    </div>
+
