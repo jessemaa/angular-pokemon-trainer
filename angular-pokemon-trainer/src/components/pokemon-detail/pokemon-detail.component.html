@@ -1,43 +1,35 @@
-<h1>Pokemon Detail</h1>
-
-<div class="flex-container img-container" *ngIf="pokemon">
-    <div class="flex-child">
-        <img [src]="pokemon.sprites.other.dream_world.front_default" [alt]="pokemon.name">
-        <div class="card">
-            <div class="card-body"><h1>{{ pokemon.name }}</h1></div>
+<div *ngIf="pokemon">
+    <div class="poke-container">
+        <div class="pokemon">
+          <div class="img-container">
+            <img [src]="pokemon.sprites.other.dream_world.front_default" [alt]="pokemon.name">
         </div>
-        <div class="card">
-            <div class="card-body"><h3>Types:</h3><span *ngFor="let type of pokemon.types"> {{type.type.name}}</span></div>
+          <div class="info">
+            <span class="number">#{{ pokemon.id }}</span>
+            <h3 class="name">{{ pokemon.name }}</h3>
+            <small class="type">Type: <span *ngFor="let type of pokemon.types">{{ type.type.name }} </span></small>
+          </div>
         </div>
-    </div>
-
-    <div class="flex-child">
-
-
-        <div class="card">
-            <h3>Base Stats</h3>
-            <div class="card-body flex-container">
-                <div class="card flex-child">
-                    <div class="card-body"><h4>Attack Stats</h4><p *ngFor="let stat of pokemon.stats"> {{stat.stat.name}} {{stat.base_stat}}</p></div>
-                </div>
-                <div class="card flex-child">
-                    <div class="card-body">
-                        <h4>Normal Stats</h4>
-                        <p>Height: {{pokemon.height}}"</p>
-                        <p>Weight: {{pokemon.weight}} lbs</p>
-                        <p>Base Experience: {{pokemon.base_experience}}</p>
-                    </div>
-                </div>
+        <div class="pokemon wider">
+            <div class="pokemon">
+                <p class="stats" *ngFor="let stat of pokemon.stats"> {{stat.stat.name}} {{stat.base_stat}}</p>
             </div>
+            <div class="pokemon">
+                <p class="stats">Height: {{ pokemon.height }}"</p>
+                <p class="stats">Weight: {{ pokemon.weight }} lbs</p>
+                <p class="stats">Base Experience: {{ pokemon.base_experience }}</p>
+                <p class="stats">Abilities: </p>
+                <p class="stats" *ngFor="let ability of pokemon.abilities">{{ ability.ability.name }}</p>
+            </div>
+            <div class="pokemon">
+                <p class="stats">moves</p>
+                <select>
+                    <option *ngFor="let move of pokemon.moves">{{move.move.name}}</option>
+                </select>
+            </div>
+                <button class="btn btn-success">Collect</button>
         </div>
-        <div class="card">
-            <div class="card-body"><h3>Abilities: </h3><span *ngFor="let ability of pokemon.abilities"> {{ability.ability.name}}</span></div>
         </div>
-        <select>
-            <option *ngFor="let move of pokemon.moves">{{move.move.name}}</option>
-        </select>
-    </div>
-
 </div>
 
 

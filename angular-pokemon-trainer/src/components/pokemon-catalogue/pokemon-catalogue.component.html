@@ -1,7 +1,11 @@
-<div *ngFor="let pokemon of pokemon" class="card" style="width: 18rem;" [routerLink]="pokemon.name">
+<div class="poke-container">
+<div *ngFor="let pokemon of pokemon" class="pokemon" [routerLink]="pokemon.name">
+  <div class="img-container">
     <img class="card-img-top" [src]="pokemon.image" [alt]="pokemon.name">
-    <div class="card-body">
-      <h5 class="card-title">{{ pokemon.name }}</h5>
-      <p class="card-text">Pokedex #{{ pokemon.id }}</p>
-    </div>
+  </div>
+  <div class="info">
+    <span class="number">#{{ pokemon.id }}</span>
+    <h3 class="name">{{ (pokemon.name[0].toUpperCase() + pokemon.name.slice(1)) }}</h3>
+  </div>
+</div>
 </div>
