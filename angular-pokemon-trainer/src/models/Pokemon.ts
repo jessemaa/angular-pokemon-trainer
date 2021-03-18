@@ -1,12 +1,32 @@
 export interface Pokemon { 
-    id: number;
-    abilities: Array<any>;
+    id?: number;
     name: string;
-    height: number
-    weight: number;
-    moves: Array<any>;
-    sprites: object;
-    base_experience: number;
-    stats: Array<any>;
-    types: Array<any>;
-  }
+    url: string;
+    image?: string;
+    weight?: number;
+    types?: PokemonType[];
+    stats?: PokemonStat[];
+    sprites?: any[];
+}
+export interface PokemonType {
+  slot: number;
+  type: PokemonTypeType;
+}
+export interface PokemonTypeType {
+  name: string;
+  url: string;
+}
+export interface PokemonStat {
+  base_stat: number;
+  effort: number;
+  stat: PokemonStatStat;
+}
+
+export interface PokemonStatStat {
+  name: string;
+  url: string;
+}
+
+export interface PokemonSprite {
+  front_default: string;
+}

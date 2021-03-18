@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LocalStorageService {
   localStorage: Storage;
+  public collectedPokemons: any[] = [];
 
   constructor() {
     this.localStorage = window.localStorage;
